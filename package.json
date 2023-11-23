@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "name": "WebBanco",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Clóvis Chakrian <clovischakriandev@gmail.com>",
+  "license": "MIT"
+}

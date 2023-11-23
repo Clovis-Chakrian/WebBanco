@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>ScriptBank</title>
+</head>
+
+<body>
+  <header>
+    <h1>ScriptBank</h1>
+    <h2>O banco que te dá o controle do seu dinheiro na palma das suas mãos!</h2>
+  </header>
+
+  <main>
+    <section id="create-account-section">
+      <h3>Criar conta</h3>
+      <form id="criaConta">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Fulano de Tal da Silva">
+
+        <label for="cpf">CPF</label>
+        <input type="number" id="cpf" name="cpf" placeholder="CPF">
+
+        <label for="saldo">Saldo inicial</label>
+        <input type="number" id="saldo" name="saldo" placeholder="5000">
+
+        <label for="conta">Tipo de conta</label>
+        <select id="conta" name="conta">
+          <option value="Corrente">Corrente</option>
+          <option value="Poupança">Poupança</option>
+          <option value="Universitária">Universitária</option>
+        </select>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="password" name="senha" placeholder="Senha">
+
+        <button type="submit">
+          Criar conta
+        </button>
+      </form>
+    </section>
+
+    <section id="visualize-account">
+      <form id="verConta">
+        <label for="cpf">CPF</label>
+        <input type="number" name="cpf" id="cpfVer">
+
+        <label for="senha">Senha</label>
+        <input id="passVer" type="password" name="senha" placeholder="Senha">
+
+        <button type="submit">
+          Acessar
+        </button>
+      </form>
+      <h3>Visualizar detalhes de conta</h3>
+      <p id="titular">Titular: </p>
+      <p id="cpfConta">CPF: </p>
+      <p id="saldoP">Saldo: </p>
+      <p id="tipoP">Tipo de conta: </p>
+      <p id="numeroP">Número da conta: </p>
+      <p id="agenciaP">Agência: </p>
+    </section>
+
+    <section id="manipulate-account">
+      <h3>Gerenciar conta</h3>
+
+      <form>
+        <label for="cpf">CPF</label>
+        <input type="number" name="cpf" placeholder="CPF">
+
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" placeholder="Senha">
+
+        <label for="senha">Valor a sacar</label>
+        <input type="password" name="senha" placeholder="Senha">
+
+        <button>
+          Sacar
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="script.js">
+  </script>
+</body>
+
+</html>

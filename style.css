@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 20px;
+  background-color: yellow;
+  margin-bottom: 30px;
+}
+
+main {
+  display: grid;
+  grid-template-areas: 
+  'a b'
+  'c c';
+}
+
+#create-account-section {
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid yellow;
+  padding: 15px;
+}
+
+#create-account-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#visualize-account {
+  grid-area: b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid yellow;
+  padding: 15px;
+}
+
+#manipulate-account {
+  grid-area: c;
+  border: 1px solid yellow;
+  padding: 15px;
+}
