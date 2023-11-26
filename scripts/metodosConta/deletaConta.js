@@ -1,9 +1,9 @@
-import { Autenticar } from "../services/auth";
+import { Autenticar } from "../services/auth.js";
 
 function DeletaConta() {
   // event.preventDefault();
-  const cpf = document.getElementById("cpf").value;
-  const password = document.getElementById("password").value;
+  const cpf = document.getElementById("mCpf").value;
+  const password = document.getElementById("mPassword").value;
 
   const { estaAutenticado, conta } = Autenticar(cpf, password);
 
