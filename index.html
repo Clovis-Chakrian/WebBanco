@@ -18,6 +18,13 @@
     <section id="create-account-section">
       <h3>Criar conta</h3>
       <form id="criaConta">
+        <label for="conta">Tipo de conta</label>
+        <select id="conta" name="conta">
+          <option value="Corrente">Corrente</option>
+          <option value="Poupança">Poupança</option>
+          <option value="Universitária">Universitária</option>
+        </select>
+
         <label for="nome">Nome completo</label>
         <input type="text" id="nome" name="nome" placeholder="Fulano de Tal da Silva">
 
@@ -26,13 +33,6 @@
 
         <label for="saldo">Saldo inicial</label>
         <input type="number" id="saldo" name="saldo" placeholder="5000">
-
-        <label for="conta">Tipo de conta</label>
-        <select id="conta" name="conta">
-          <option value="Corrente">Corrente</option>
-          <option value="Poupança">Poupança</option>
-          <option value="Universitária">Universitária</option>
-        </select>
 
         <label for="senha">Senha</label>
         <input type="password" id="password" name="senha" placeholder="Senha">
@@ -67,20 +67,52 @@
     <section id="manipulate-account">
       <h3>Gerenciar conta</h3>
 
+      <form id="manipulaConta">
+        <label for="mOperacoes">Selecione a operação</label>
+        <select id="mOperacoes" name="conta">
+          <option value="DEPOSITAR">DEPOSITAR</option>
+          <option value="SACAR">SACAR</option>
+        </select>
+
+        <label for="mCpf">CPF</label>
+        <input type="number" id="mCpf" name="mCpf" placeholder="CPF">
+
+        <label for="mPassword">Senha</label>
+        <input type="password" id="mPassword" name="mPassword" placeholder="Senha">
+
+        <label for="mValor">Valor</label>
+        <input type="number" id="mValor" name="valor" placeholder="Valor">
+
+        <div id="mButtonsDiv">
+          <button type="button" id="mButtonDeletaConta">
+            Deletar conta
+          </button>
+
+          <button type="button" id="mButtonRealizaOperacao">
+            Realizar operacao
+          </button>          
+        </div>
+      </form>
+    </section>
+
+    <section id="graficos">
+      <h3>Gerenciar conta</h3>
+
       <form>
-        <label for="cpf">CPF</label>
-        <input type="number" name="cpf" placeholder="CPF">
-
-        <label for="senha">Senha</label>
-        <input type="password" name="senha" placeholder="Senha">
-
-        <label for="senha">Valor a sacar</label>
-        <input type="password" name="senha" placeholder="Senha">
+        <select id="opcoesManipulaConta" name="conta">
+          <option value="DEPOSITAR">DEPOSITAR</option>
+          <option value="SACAR">SACAR</option>
+        </select>
 
         <button>
-          Sacar
+          Mostrar grafico
         </button>
       </form>
+
+      <canvas>
+
+      </canvas>
+      <p>grafico aqui</p>
     </section>
   </main>
 

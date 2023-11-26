@@ -12,6 +12,7 @@ export class ContaUniversitaria extends ContaBancaria {
   sacar(valor) {
     if ((valor <= 500) && (valor > 0)) {
       this.saldo -= valor;
+      this.addTransacao("saque", valor);
       return `Você sacou R$ ${valor} com sucesso`;
     }
 

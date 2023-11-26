@@ -21,7 +21,7 @@ main {
   display: grid;
   grid-template-areas: 
   'a b'
-  'c c';
+  'c d';
 }
 
 #create-account-section {
@@ -55,6 +55,37 @@ main {
 
 #manipulate-account {
   grid-area: c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 1px solid yellow;
   padding: 15px;
+}
+
+#manipulate-account form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+#graficos {
+  grid-area: d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid yellow;
+  padding: 15px;
+}
+
+#mButtonsDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }

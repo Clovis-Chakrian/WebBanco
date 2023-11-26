@@ -1,9 +1,11 @@
 export class ContaBancaria {
-  constructor(numero, agencia, tipo, saldo) {
+  constructor(titular, numero, agencia, tipo, saldo) {
+    this.titular = titular;
     this.numero = numero;
     this.agencia = agencia;
     this.tipo = tipo;
     this.saldo = saldo;
+    this.historico = [];
   };
 
   getNumero() {
@@ -11,8 +13,12 @@ export class ContaBancaria {
   };
 
   getSaldo() {
-    return this.saldo;
+    return Number(this.saldo);
   };
+
+  getHistorico() {
+    return this.historico;
+  }
 
   setSaldo() {
     return this.saldo();
@@ -20,9 +26,23 @@ export class ContaBancaria {
 
   sacar(valor) {
     this.saldo -= valor;
+    this.addTransacao("saque", valor);
+    return `Você sacou R$ ${valor} com sucesso`;
   };
 
   depositar(valor) {
-    this.saldo += this.saldo;
+    this.saldo += valor;
+    this.addTransacao("deposito", valor);
+    return "Deposito realizado com sucesso!"
   };
+
+  addTransacao(tipo, valor) {
+    const transacao = {
+      tipo,
+      valor,
+      data: new Date()
+    };
+
+    this.historico = [...this.historico, transacao];
+  }
 };
