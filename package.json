@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "WebBanco",
+  "name": "webbanco",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Clóvis Chakrian <clovischakriandev@gmail.com>",
