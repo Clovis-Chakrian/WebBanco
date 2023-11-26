@@ -99,25 +99,28 @@
       <h3>Gerenciar conta</h3>
 
       <form>
-        <select id="opcoesManipulaConta" name="conta">
-          <option value="DEPOSITAR">DEPOSITAR</option>
-          <option value="SACAR">SACAR</option>
+        <select id="graficosTipos" name="conta">
+          <option value="barra">Transações barras</option>
+          <option value="pizza">Transações pizza</option>
+          <option value="linha">Histórico geral de transações</option>
         </select>
 
-        <button>
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" placeholder="CPF" id="gCpf">
+
+        <button type="button" id="mostraGrafico">
           Mostrar grafico
         </button>
       </form>
 
-      <canvas>
+      <canvas id="grafico">
 
       </canvas>
-      <p>grafico aqui</p>
     </section>
   </main>
 
-  <script type="module" src="script.js">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
